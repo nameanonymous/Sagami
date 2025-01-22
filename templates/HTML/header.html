@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temporary Website</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/mainpage.css') }}">
+    <div class="header_middle_wrap wrap">
+        <p class="header_middle_logo">
+            <a href="https://www.sagami.co.jp/">
+                <img src="../../static/img/452519956_1029814785180638_8094540993209807797_n.jpg" width="80" height="80" alt="Sagami Madrid Logo">
+            </a>
+        </p>
+        <ul class="header_middle_nav sphide">
+            <li class="has_submenu">
+                <a class="js_showsubnav" data-attribute="subnav_menu">Menú para tu</a>
+            </li>
+            <li>
+                <a href="https://www.sagami.co.jp/beginners/">Qué es Sagami?</a>
+            </li>
+            <li class="has_submenu corp_url">
+                <a class="js_showsubnav" data-attribute="subnav_corp">
+                    <img src="https://www.sagami.co.jp/wp-content/themes/sagami/image-cmn/logo-corp.png" width="229" height="20" alt="株式会社サガミホールディングス">
+                </a>
+            </li>
+        </ul>
+        <ul class="header_middle_nav sphide">
+            <ul class="hd_menu_sns_box">
+                <li>
+                    <a href="https://www.instagram.com/sagami.es/">
+                        <img src="https://www.sagami.co.jp/wp-content/themes/sagami/image-cmn/ico-instagram-color.png" alt="Instagram" width="30" height="29">
+                    </a>
+                </li>
+            </ul>
+        </ul>
+    </div>
+</head>
+{% block content %}
+{% endblock %}
+{% block script %}
+{% endblock %}
+</html>

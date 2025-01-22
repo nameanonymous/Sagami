@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap');
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.header_middle {
+    background-color: #f8f8f8;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+.header_middle_wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.header_middle_logo {
+    display: flex;
+    align-items: center;
+}
+.header_middle_logo img {
+    display: block;
+}
+.hd_menu_sns_box {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 0 20px;
+}
+.hd_menu_sns_box li {
+    margin-left: 10px;
+}
+.hd_menu_sns_box img {
+    display: block;
+}
+.header_sp_nav {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.header_sp_nav p {
+    margin: 0;
+}
+.header_sp_nav a {
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+}
+.header_middle_nav {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 20px;
+}
+.header_middle_nav li {
+    position: relative;
+}
+.header_middle_nav a {
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+}
+
+.mainvisual {
+    width: 100%;
+    overflow: hidden;
+}
+
+#photos {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#photos li {
+    flex-shrink: 0;
+    width: 300px;
+    margin-right: 10px;
+}
+
+#photos img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+p.sagami_description {
+    font-family: 'Noto Serif JP', serif;
+    background-color: #fdf8f5; /* 和風の柔らかい背景色 */
+    color: #333; /* 落ち着いた文字色 */
+    text-align: center;
+    padding: 50px;
+}
+p {
+    font-size: 1.5em;
+    margin: 10px 0;
+}

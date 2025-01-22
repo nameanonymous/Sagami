@@ -1,0 +1,14 @@
+flask==1.1.4
+flask-marshmallow==0.14.0
+flask-script
+flask-sqlalchemy
+flask_caching
+flask_cors
+flask_login
+Flask-Migrate==2.5.3
+flask_paginate
+flask_restful
+flask-swagger-ui
+flask_wtf
+markupsafe==2.0.1
+gunicorn

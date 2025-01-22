@@ -1,0 +1,55 @@
+{% extends "HTML/header.html" %}
+{% block content %}
+<body>
+    <div class="header_middle mainsite">
+        <div class="mainvisual">
+            <ul id="photos">
+                <li class="photo"><img src="../../static/img/456023104_17851997601256774_6935166053450976250_n.jpg" height="1350"
+                                       width="1080"/></li>
+                <li class="photo"><img src="../../static/img/464922058_17862466296256774_5487217515007128297_n.jpg" height="1350"
+                                       width="1080"/></li>
+                <li class="photo"><img src="../../static/img/468980899_17867596677256774_2886666212283354944_n.jpg" height="1350"
+                                       width="1080"/></li>
+                <li class="photo"><img src="../../static/img/465050808_17862687792256774_2303552281144858064_n.jpg" height="1350"
+                                       width="1080"/></li>
+                <li class="photo"><img src="../../static/img/469441387_17867596605256774_6232107429951756575_n.jpg" height="1350"
+                                       width="1080"/></li>
+                <li class="photo"><img src="../../static/img/463463327_17860559460256774_6175136869581144661_n.jpg" height="1350"
+                                       width="1080"/></li>
+            </ul>
+        </div>
+    </div>
+        <p class="sagami_description">Sagami,el comedor de los japoneses.<br>Sagami, el comedor, ahora también es para españoles.</p>
+    </div>
+</body>
+{% endblock %}
+
+{% block script %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+
+    $(document).ready(function () {
+        var $photos = $('#photos'),
+            $lis = $('#photos li');
+
+        var li_count = $lis.length;
+        var li_width = $lis.outerWidth(true);  // リスト項目の幅 + マージンを考慮
+
+        // 画像リストの全体幅を設定
+        $photos.css('width', (li_width * li_count) + 'px');
+
+        // 永続的にスライドさせる
+        setInterval(function () {
+            // アニメーションで左にスライドさせる
+            $photos.animate({
+                marginLeft: -li_width  // リスト全体を左にスライド
+            }, 3500, 'linear', function () {
+                // スライド終了後、リストの最初の項目を最後に移動
+                $photos.css('margin-left', '0').find('li:first').appendTo($photos);
+            });
+        }, 3500);  // アニメーションの間隔（スライドとスライドの間）
+    });
+</script>
+{% endblock %}
+
+</html>
