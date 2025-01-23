@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Temporary Website</title>
-    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/mainpage.css') }}">
-    <div class="header_middle_wrap wrap">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/mainpage.css') }}" media="(min-width:751px)">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/mainpage_sp.css') }}" media="(max-width:750px)">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css" integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg==" crossorigin="anonymous" referrerpolicy="no-referrer" />    <div class="header_middle_wrap wrap">
         <p class="header_middle_logo">
             <a href="https://www.sagami.co.jp/">
                 <img src="../../static/img/452519956_1029814785180638_8094540993209807797_n.jpg" width="80" height="80" alt="Sagami Madrid Logo">
@@ -34,6 +36,30 @@
             </ul>
         </ul>
     </div>
+    <header>
+      <div class="slider stick-dots">
+        <div class="slide">
+          <div class="slide__img">
+            <img src="" alt="" data-lazy="https://sagami.it/wp-content/uploads/2020/09/slide_01_mod.jpg" class="full-image animated" data-animation-in="zoomInImage"/>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="slide__img">
+            <img src="" alt="" data-lazy="https://sagami.it/wp-content/uploads/2020/09/slide_02_mod.jpg" class="full-image animated" data-animation-in="zoomInImage"/>
+          </div>
+        </div>
+              <div class="slide">
+          <div class="slide__img">
+            <img src="" alt="" data-lazy="https://sagami.it/wp-content/uploads/2020/09/slide_03_mod.jpg" class="full-image animated" data-animation-in="zoomInImage"/>
+          </div>
+        </div>
+              <div class="slide">
+          <div class="slide__img">
+            <img src="" alt="" data-lazy="https://sagami.it/wp-content/uploads/2020/09/slide_04_mod.jpg" class="full-image animated" data-animation-in="zoomInImage"/>
+          </div>
+        </div>
+      </div>
+    </header>
 </head>
 {% block content %}
 {% endblock %}

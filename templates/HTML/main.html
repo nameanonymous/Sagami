@@ -19,37 +19,19 @@
             </ul>
         </div>
     </div>
+    <div>
         <p class="sagami_description">Sagami,el comedor de los japoneses.<br>Sagami, el comedor, ahora también es para españoles.</p>
+    </div>
+    <div>
+        NEXT CONTENT
     </div>
 </body>
 {% endblock %}
 
 {% block script %}
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script>
-
-    $(document).ready(function () {
-        var $photos = $('#photos'),
-            $lis = $('#photos li');
-
-        var li_count = $lis.length;
-        var li_width = $lis.outerWidth(true);  // リスト項目の幅 + マージンを考慮
-
-        // 画像リストの全体幅を設定
-        $photos.css('width', (li_width * li_count) + 'px');
-
-        // 永続的にスライドさせる
-        setInterval(function () {
-            // アニメーションで左にスライドさせる
-            $photos.animate({
-                marginLeft: -li_width  // リスト全体を左にスライド
-            }, 3500, 'linear', function () {
-                // スライド終了後、リストの最初の項目を最後に移動
-                $photos.css('margin-left', '0').find('li:first').appendTo($photos);
-            });
-        }, 3500);  // アニメーションの間隔（スライドとスライドの間）
-    });
-</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="../../static/script/script.js"></script>
 {% endblock %}
 
 </html>
