@@ -113,3 +113,61 @@ p {
     font-size: 1.5em;
     margin: 10px 0;
 }
+
+// Design Slider
+.slider {
+  position: relative;
+  overflow: hidden;
+}
+
+.slide {
+  position: relative; /* absoluteをrelativeに変更 */
+  height: auto;
+}
+
+.slide__img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.slide-text {
+  position: absolute; /* テキストをスライド内で絶対配置 */
+  top: 50%; /* 垂直方向で中央揃え */
+  left: 50%; /* 水平方向で中央揃え */
+  transform: translate(-50%, -50%); /* 中央揃えを正確にするための変換 */
+  color: white; /* 文字色 */
+  font-size: 24px; /* フォントサイズ */
+  font-weight: bold; /* フォントを太字に */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* 読みやすいように文字に影を追加 */
+  z-index: 10; /* 文字を画像の上に表示 */
+  text-align: center; /* 中央揃え */
+  font-family: 'Noto Serif JP', serif;
+
+}
+
+// Change animation presets
+.slider [data-animation-in] {
+    opacity: 0;
+    animation-duration: 1.5s;
+    transition: opacity 0.5s ease 0.3s;
+}
+
+// Dots
+    /* ドットをスライド内に配置 */
+    .slick-dots {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 15;
+    }
+
+    .slick-dots li button:before {
+      color: white;
+      font-size: 12px;
+    }
+
+    .slick-dots li.slick-active button:before {
+      color: #f39c12;
+    }
