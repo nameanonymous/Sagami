@@ -19,11 +19,30 @@ $(document).ready(function () {
             });
         }, 3500);  // アニメーションの間隔（スライドとスライドの間）
     });
+
+
     $('.slider').slick({
-        autoplay: true,
-        speed: 800,
-        lazyLoad: 'progressive',
-        adaptiveHeight: true,
-        arrows: false,
-        dots: true,
-        }).slickAnimation();
+      autoplay: true,
+      speed: 800,
+      lazyLoad: 'progressive',
+      adaptiveHeight: true,
+      arrows: false,
+      dots: true,
+    }).on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+      // 全てのスライド内の文字を非表示にする
+      $('.slide-text').css({
+        opacity: 0,
+        animation: 'none', // アニメーションをリセット
+      });
+    }).on('afterChange', function (event, slick, currentSlide) {
+      // 現在のスライドにアニメーションを適用
+      const $currentText = $('.slick-current .slide-text');
+      $currentText.css({
+        opacity: 0, // 再度非表示にセット
+        animation: 'none', // アニメーションリセット
+      });
+      void $currentText[0].offsetWidth; // DOMをリフレッシュ
+      $currentText.css({
+        animation: 'fadeIn 1.5s ease-out forwards', // 新しいアニメーションを適用
+      });
+    });

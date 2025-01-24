@@ -137,21 +137,37 @@ p {
   left: 50%; /* 水平方向で中央揃え */
   transform: translate(-50%, -50%); /* 中央揃えを正確にするための変換 */
   color: white; /* 文字色 */
-  font-size: 24px; /* フォントサイズ */
+  font-size: 12px; /* フォントサイズ */
   font-weight: bold; /* フォントを太字に */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* 読みやすいように文字に影を追加 */
   z-index: 10; /* 文字を画像の上に表示 */
   text-align: center; /* 中央揃え */
   font-family: 'Noto Serif JP', serif;
+  opacity: 0; /* 初期状態で非表示 */
+  animation: fadeIn 1.5s ease-out forwards; /* アニメーションを適用 */
+  animation-delay: 0.5s; /* アニメーションの開始を遅延 */
 
 }
 
 // Change animation presets
-.slider [data-animation-in] {
-    opacity: 0;
-    animation-duration: 1.5s;
-    transition: opacity 0.5s ease 0.3s;
-}
+    .slider [data-animation-in] {
+        opacity: 0;
+        animation-duration: 1.5s;
+        transition: opacity 0.5s ease 0.3s;
+    }
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(20px); /* 下からスライドイン */
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0); /* 元の位置に移動 */
+      }
+    }
+    .animate {
+      animation: fadeIn 3s ease-out forwards;
+    }
 
 // Dots
     /* ドットをスライド内に配置 */
